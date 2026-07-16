@@ -2,6 +2,8 @@
 
 ## Chapter 01: Introduction
 
+Building of an application calledGreenlight - a JSON API for retrieving and managing information about movies
+
 | Method | URL Patter                | Action                                          |
 |--------|---------------------------|-------------------------------------------------|
 | GET    | /v1/healthcheck           | Show application health and version information |
@@ -16,3 +18,28 @@
 | POST   | /v1/tokens/authentication | Generate a new authentication token             |
 | POST   | /v1/tokens/password-reset | Generate a new password-reset token             |
 | GET    | /debug/vars               |Display application metrics                      |
+
+
+## Chapter 02: Getting started
+
+### Chapter 02.01: Project setup and skeleton structure
+
+* Initialize go module
+
+``` bash
+go mod init greenlight.yyovkov.net
+```
+
+* Generating the skeleton directory structure
+
+``` bash
+mkdir -p bin cmd/api internal migrations remote
+touch Makefile
+touch cmd/api/main.go
+```
+
+### Chapter 02.02: A basic HTTP server
+
+| Method | URL Patter                | Action                                          |
+|--------|---------------------------|-------------------------------------------------|
+| GET    | /v1/healthcheck           | Show application health and version information |
