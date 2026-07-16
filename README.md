@@ -62,3 +62,28 @@ touch cmd/api/main.go
 ### Chapter 03.02: JSON encoding
 
 ### Chapter 03.03: Encoding structs
+
+### Chapter 03.04: Formatting and enveloping responses
+
+Makes JSON output easier to read in terminal.
+Adding structure to the JSON output, like, "movie":
+
+``` JSON
+{
+	"movie": {
+		"id": 123,
+		"create_at": "2026-07-16T13:32:07.5195+03:00",
+		"title": "Casablanca",
+		"runtime": 102,
+		"genres": [
+			"drama",
+			"romance",
+			"war"
+		],
+		"version": 1
+	}
+}
+  ```
+```
+```
+
