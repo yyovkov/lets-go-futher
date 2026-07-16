@@ -59,3 +59,4 @@ touch cmd/api/main.go
 
 ### Chapter 03.01: Fixed-format JSON
 
+### Chapter 03.02: JSON encoding
