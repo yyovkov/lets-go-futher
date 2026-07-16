@@ -111,3 +111,25 @@ Adding structure to the JSON output, like, "movie":
 ### Chapter 04.04: Custom JSON decoding
 
 ### Chapter 04.05: Validating JSON input
+
+## Chapter 05; Database setup and configuration
+
+### Chapter 05.01: Setting up PostgreSQL
+
+* Start Database
+
+``` bash
+make db-start
+```
+
+* Login to database
+
+``` bash
+psql -h 127.0.0.1 -p 5432
+```
+
+* Create users and extensions
+
+``` sql
+
+```

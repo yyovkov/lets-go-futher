@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:18
+    hostname: postgres
+    restart: always
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=password"
+      - "POSTGRES_DB=greenlight"
+      - "PGPORT=5432"
+    ports:
+      - 5432:5432
+    volumes:
+      - ./_local/var/postgresql/data/18:/var/lib/postgresql/18
+  mailpit:
+    image: axllent/mailpit
+    restart: unless-stopped
+    volumes:
+      - ./_local/var/mailpit/data:/data
+    ports:
+      - 8025:8025
+      - 1025:1025
+    environment:
+      MP_MAX_MESSAGES: 5000
+      MP_DATABASE: ./data/mailpit.db
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+      MP_SMTP_DISABLE_RDNS: false
+      MP_VERBOSE: true
