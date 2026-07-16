@@ -30,7 +30,6 @@ func (app *application) showMovieHander(w http.ResponseWriter, r *http.Request) 
 
 	err = app.writeJSON(w, http.StatusOK, envelope{"movie": movie}, nil)
 	if err != nil {
-		app.logger.Error(err.Error())
-		http.Error(w, "The server encountered a problem an could not process your request", http.StatusInternalServerError)
+		app.serverErrorReponse(w, r, err)
 	}
 }

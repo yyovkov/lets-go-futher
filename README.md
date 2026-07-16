@@ -88,3 +88,8 @@ Adding structure to the JSON output, like, "movie":
 ```
 
 ### Chapter 03.05: Advanced JSON customization
+
+### Chapter 03.06: Sending error messages
+
+* Routing errors
+* Panic recovery
