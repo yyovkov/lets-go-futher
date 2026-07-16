@@ -55,3 +55,7 @@ touch cmd/api/main.go
 | PATCH  | /v1/movies/:id            | Update the details of a specific movie          |
 | DELETE | /v1/movies/:id            | Delete a specific movie                         |
 
+## Chapter 03: Sending JSON responses
+
+### Chapter 03.01: Fixed-format JSON
+
