@@ -104,3 +104,4 @@ Adding structure to the JSON output, like, "movie":
 
 ### Chapter 04.01: JSON decoding
 
+### Chapter 04.02: Managing bad requests
