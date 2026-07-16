@@ -108,3 +108,5 @@ Adding structure to the JSON output, like, "movie":
 
 ### Chapter 04.03: Restricting inputs
 
+### Chapter 04.04: Custom JSON decoding
+
