@@ -93,3 +93,14 @@ Adding structure to the JSON output, like, "movie":
 
 * Routing errors
 * Panic recovery
+
+## Chapter 04: Parting JSON requests
+
+| Method | URL Patter                | Action                                          |
+|--------|---------------------------|-------------------------------------------------|
+| GET    | /v1/healthcheck           | Show application health and version information |
+| **POST**   | **/v1/movies**        | **Create a new movie**                          |
+| GET    | /v1/movies/:id            | Show the details of a specific movie            |
+
+### Chapter 04.01: JSON decoding
+
