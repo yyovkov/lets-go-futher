@@ -110,3 +110,4 @@ Adding structure to the JSON output, like, "movie":
 
 ### Chapter 04.04: Custom JSON decoding
 
+### Chapter 04.05: Validating JSON input
