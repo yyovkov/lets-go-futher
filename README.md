@@ -122,14 +122,30 @@ Adding structure to the JSON output, like, "movie":
 make db-start
 ```
 
-* Login to database
+* Login to database as postgres user
 
 ``` bash
-psql -h 127.0.0.1 -p 5432
+PGPASSWORD=password psql -h 127.0.0.1 -p 5432 -U postgres -w greenlight
 ```
 
 * Create users and extensions
 
 ``` sql
-
+CREATE ROLE greenlight WITH LOGIN PASSWORD 'pa55word';
+CREATE EXTENSION IF NOT EXISTS citext;
 ```
+
+* Login to database as greenlight user
+
+``` bash
+PGPASSWORD=pa55word psql -h 127.0.0.1 -p 5432 -U greenlight -w greenlight
+```
+
+### Chapter 05.02: Connecting to PosgreSQL
+
+* Install Golang packages
+
+``` bash
+go get github.com/lib/pq@v1
+```
+
