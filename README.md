@@ -112,7 +112,7 @@ Adding structure to the JSON output, like, "movie":
 
 ### Chapter 04.05: Validating JSON input
 
-## Chapter 05; Database setup and configuration
+## Chapter 05: Database setup and configuration
 
 ### Chapter 05.01: Setting up PostgreSQL
 
@@ -148,4 +148,31 @@ PGPASSWORD=pa55word psql -h 127.0.0.1 -p 5432 -U greenlight -w greenlight
 ``` bash
 go get github.com/lib/pq@v1
 ```
+
+### Chapter 05.03: Configuring the database connection pool
+
+## Section 06: SQL migrations
+
+### Section 06.01: An overview of SQL migrations
+
+* Installing the migrate tool on mac
+
+``` bash
+brew install golang-migrate
+```
+
+* Installing the migrate tool on Linux and Windows
+
+``` bash
+cd /tmp
+curl -L https://github.com/golang-migrate/migrate/releases/download/v4.19.1/migrate.linux-amd64.tar.gz | tar xvz
+mv migrate ~/go/bin/
+```
+
+## Chapter 06.02: Working with SQL migrations
+
+``` bash
+migrate create -seq -ext=.sql -dir=./migrations create_movies_table
+```
+
 
