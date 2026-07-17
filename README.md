@@ -135,6 +135,13 @@ CREATE ROLE greenlight WITH LOGIN PASSWORD 'pa55word';
 CREATE EXTENSION IF NOT EXISTS citext;
 ```
 
+* Grant access to greenlight database to greenlight user
+
+``` sql
+ALTER DATABASE greenlight OWNER TO greenlight;
+GRANT CREATE ON DATABASE greenlight TO greenlight;
+```
+
 * Login to database as greenlight user
 
 ``` bash
@@ -171,8 +178,40 @@ mv migrate ~/go/bin/
 
 ## Chapter 06.02: Working with SQL migrations
 
+* Create migrations
+
 ``` bash
 migrate create -seq -ext=.sql -dir=./migrations create_movies_table
 ```
 
+* Execute migrations
+
+``` bash
+migrate -path=./migrations -database=$GREENLIGHT_DB_DSN up
+```
+
+* Look at the migrations with `migrate` tool
+
+``` bash
+$ migrate -path=./migrations -database=$EXAMPLE_DSN version
+2
+```
+
+* Look at migrations tables with SQL
+
+``` sql
+SELECT * FROM schema_migrations;
+```
+
+* Execute down migrations (only informative, do not execute)
+
+This command will roll back the **most recent migration** run
+
+``` sql
+migrate -path=./migrations -database =$EXAMPLE_DSN down 1
+```
+
+* Fixing failed migrations
+
+Read how to fix migrations from the book, to save copy/paste here.
 
