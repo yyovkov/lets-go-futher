@@ -158,6 +158,12 @@ go get github.com/lib/pq@v1
 
 ### Chapter 05.03: Configuring the database connection pool
 
+* Create environmental variable with DSN
+
+``` bash
+echo 'export GREENLIGHT_DB_DSN=postgres://greenlight:pa55word@localhost/greenlight?sslmode=disable' >> .envrc
+```
+
 ## Section 06: SQL migrations
 
 ### Section 06.01: An overview of SQL migrations
@@ -214,4 +220,16 @@ migrate -path=./migrations -database =$EXAMPLE_DSN down 1
 * Fixing failed migrations
 
 Read how to fix migrations from the book, to save copy/paste here.
+
+## Chapter 07: CRUD operations
+
+| Method | URL Patter                | Action                                          |
+|--------|---------------------------|-------------------------------------------------|
+| GET    | /v1/healthcheck           | Show application information                    |
+| POST   | /v1/movies                | Create a new movie                              |
+| GET    | /v1/movies/:id            | Show the details of a specific movie            |
+| PUT    | /v1/movies/:id            | Update the details of a specific movie          |
+| DELETE | /v1/movies/:id            | Delete a specific movie                         |
+
+### Chapter 07.01: Setting up the movie model
 
