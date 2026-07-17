@@ -247,3 +247,6 @@ curl -d "$BODY" localhost:4000/v1/movies
 BODY='{"title":"The Breakfast Club","year":1986, "runtime":"96 mins","genres":["drama"]}'
 curl -d "$BODY" localhost:4000/v1/movies
 ```
+
+### Chapter 07.03: Fetching a movie
+
