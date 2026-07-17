@@ -261,3 +261,11 @@ curl -X PUT -d "$BODY" localhost:4000/v1/movies/2
 curl localhost:4000/v1/movies/2
 ```
 
+### Chapter 07.05: Deleting a movie
+
+* Delete movie command
+
+``` bash
+curl -X DELETE localhost:4000/v1/movies/3
+```
+
