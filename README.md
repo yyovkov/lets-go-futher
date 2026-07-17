@@ -250,3 +250,14 @@ curl -d "$BODY" localhost:4000/v1/movies
 
 ### Chapter 07.03: Fetching a movie
 
+### Chapter 07.04: Updating a movie
+
+* Update movie
+
+``` bash
+curl localhost:4000/v1/movies/2
+BODY='{"title":"Black Panther","year":2018,"runtime":"134 mins","genres":["sci-fi","action","adventure"]}'
+curl -X PUT -d "$BODY" localhost:4000/v1/movies/2
+curl localhost:4000/v1/movies/2
+```
+
