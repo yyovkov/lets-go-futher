@@ -279,3 +279,14 @@ curl -X DELETE localhost:4000/v1/movies/3
 curl -X PATCH -d '{"year": 1985}' localhost:4000/v1/movies/4
 ```
 
+### Chapter 08.02: Optimistic concurrency
+
+* Test race condition with `xargs` command
+
+``` bash
+xargs -I % -P8 curl -X PATCH -d '{"runtime": "97 mins"}' "localhost:4000/v1/movies/4" < <(printf '%s\n' {1..8})
+```
+```
+
+
+```
