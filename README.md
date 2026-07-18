@@ -269,3 +269,13 @@ curl localhost:4000/v1/movies/2
 curl -X DELETE localhost:4000/v1/movies/3
 ```
 
+## Chapter 08: Advanced CRUD operations
+
+### Chapter 08.01: Handling partial updates
+
+* Demonstration
+
+``` bash
+curl -X PATCH -d '{"year": 1985}' localhost:4000/v1/movies/4
+```
+
