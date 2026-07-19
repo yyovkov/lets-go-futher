@@ -295,4 +295,19 @@ xargs -I % -P8 curl -X PATCH -d '{"runtime": "97 mins"}' "localhost:4000/v1/movi
 curl -w '\nTime: %{time_total}s \n' localhost:4000/v1/movies/1
 ```
 
+## Chapter 09: Filtering, sorting and pagination
+
+### Chapter 09.01: Parsing query string parameters
+
+* Adding the API handler and route
+
+* Test  list movies handler
+
+``` bash
+curl "localhost:4000/v1/movies?title=godfather&genres=crime,drama&page=1&page_size=5&sort=year"
+curl "localhost:4000/v1/movies"
+```
+
+* Creating a Filters struct
+
 
