@@ -332,3 +332,4 @@ migrate -path ./migrations -database $GREENLIGHT_DB_DSN up
 
 ### Chapter 09.07: Paginating list
 
+### Chapter 09.08: Returning pagination metadata
