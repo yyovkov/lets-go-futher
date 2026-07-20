@@ -310,4 +310,5 @@ curl "localhost:4000/v1/movies"
 
 * Creating a Filters struct
 
+### Chapter 09.02: Validating query string parameters
 
