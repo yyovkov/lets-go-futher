@@ -312,3 +312,5 @@ curl "localhost:4000/v1/movies"
 
 ### Chapter 09.02: Validating query string parameters
 
+### Chapter 09.03: Listing data
+
