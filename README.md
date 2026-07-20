@@ -312,5 +312,18 @@ curl "localhost:4000/v1/movies"
 
 ### Chapter 09.02: Validating query string parameters
 
-### Chapter 09.03: Listing data
+### Chapter 09.04: Listing data
 
+### Chapter 09.05: Full-text search
+
+* Create database [GIN indexes](https://www.postgresql.org/docs/current/textsearch-indexes.html)
+
+``` bash
+migrate create -seq -ext .sql -dir ./migrations add_movies_indexes
+```
+
+* Execute migrations
+
+``` bash
+migrate -path ./migrations -database $GREENLIGHT_DB_DSN up
+```
