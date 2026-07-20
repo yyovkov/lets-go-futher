@@ -329,3 +329,6 @@ migrate -path ./migrations -database $GREENLIGHT_DB_DSN up
 ```
 
 ### Chapter 09.06: Sorting List
+
+### Chapter 09.07: Paginating list
+
