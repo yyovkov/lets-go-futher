@@ -24,7 +24,7 @@ func (app *application) errorResponse(w http.ResponseWriter, r *http.Request, st
 	}
 }
 
-func (app *application) serverErrorReponse(w http.ResponseWriter, r *http.Request, err error) {
+func (app *application) serverErrorResponse(w http.ResponseWriter, r *http.Request, err error) {
 	app.logError(r, err)
 
 	message := "the server encountered a problem and could not proceed your request"
@@ -52,4 +52,9 @@ func (app *application) failedValidationResponses(w http.ResponseWriter, r *http
 func (app *application) editConflictResponse(w http.ResponseWriter, r *http.Request) {
 	message := "update to update the record due to an edit conflict, please try again"
 	app.errorResponse(w, r, http.StatusConflict, message)
+}
+
+func (app *application) rateLimitExceededResponse(w http.ResponseWriter, r *http.Request) {
+	message := "rate limit exceeded"
+	app.errorResponse(w, r, http.StatusTooManyRequests, message)
 }

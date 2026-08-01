@@ -12,6 +12,11 @@ help:
 # TARGETS
 # ==============================================================================
 ## db-start: Start postgreslq database
-.PHONY: db-start
-db-start:
+.PHONY: start
+start:
 	docker compose up -d
+
+
+.PHONY: stop
+stop:
+	docker compose down

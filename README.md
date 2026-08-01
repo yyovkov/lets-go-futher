@@ -333,3 +333,14 @@ migrate -path ./migrations -database $GREENLIGHT_DB_DSN up
 ### Chapter 09.07: Paginating list
 
 ### Chapter 09.08: Returning pagination metadata
+
+## Chapter 10: Rate limiting
+
+### Chapter 10.01: Global rate limiting
+
+* Install golang package
+
+``` bash
+go get golang.org/x/time/rate@latest
+```
+
