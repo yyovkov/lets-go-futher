@@ -344,3 +344,17 @@ migrate -path ./migrations -database $GREENLIGHT_DB_DSN up
 go get golang.org/x/time/rate@latest
 ```
 
+### Chapter 10.02: IP-based rate limiting
+
+* Install golang package `realip`
+
+``` bash
+go get github.com/tomasen/realip@latest
+```
+
+* Testing rate limiting
+
+``` bash
+for i in {1..6}; do curl http://localhost:4000/v1/healthcheck; done
+```
+
