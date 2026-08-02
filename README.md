@@ -358,3 +358,17 @@ go get github.com/tomasen/realip@latest
 for i in {1..6}; do curl http://localhost:4000/v1/healthcheck; done
 ```
 
+### Chapter 10.03: Configuring the rate limiters
+
+## Chapter 11: Graceful shutdown
+
+### Chapter 11.01
+
+| Signal  | Description                          | Keyboard Shortcut | Catchable |
+|---------|--------------------------------------|-------------------|-----------|
+| SIGINT  | Interrupt from keyboard              | Ctrl+C            | Yes       |
+| SIGQUIT | Quit from keyboard                   | Ctrl+\            | Yes       |
+| SIGKILL | Kill process (terminate immediately) | -                 | No        |
+| SIGTERM | Terminate process in orderly manner  | -                 | Yes       |
+
+
