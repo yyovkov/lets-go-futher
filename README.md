@@ -362,7 +362,7 @@ for i in {1..6}; do curl http://localhost:4000/v1/healthcheck; done
 
 ## Chapter 11: Graceful shutdown
 
-### Chapter 11.01
+### Chapter 11.01: Sending shutdown signals
 
 | Signal  | Description                          | Keyboard Shortcut | Catchable |
 |---------|--------------------------------------|-------------------|-----------|
@@ -370,5 +370,9 @@ for i in {1..6}; do curl http://localhost:4000/v1/healthcheck; done
 | SIGQUIT | Quit from keyboard                   | Ctrl+\            | Yes       |
 | SIGKILL | Kill process (terminate immediately) | -                 | No        |
 | SIGTERM | Terminate process in orderly manner  | -                 | Yes       |
+
+### Chapter 11.02: Intercept shutdown signals
+
+### Chapter 11.03: Executing the shutdown
 
 
