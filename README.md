@@ -387,3 +387,8 @@ for i in {1..6}; do curl http://localhost:4000/v1/healthcheck; done
 go get golang.org/x/crypto/bcrypt@latest
 ```
 
+### Chapter 12.03: Registering a user
+
+| Method | URL Patter                | Action                                          |
+|--------|---------------------------|-------------------------------------------------|
+| POST   | /v1/users                 | Register a new user                             |
