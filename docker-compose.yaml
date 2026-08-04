@@ -17,6 +17,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./_local/var/mailpit/data:/data
+      - ./_local/ssl:/ssl
     ports:
       - 8025:8025
       - 1025:1025
@@ -27,3 +28,5 @@ services:
       MP_SMTP_AUTH_ALLOW_INSECURE: 1
       MP_SMTP_DISABLE_RDNS: false
       MP_VERBOSE: true
+      MP_SMTP_TLS_CERT: /ssl/smtp.crt
+      MP_SMTP_TLS_KEY: /ssl/smtp.key

@@ -11,12 +11,12 @@ help:
 # ==============================================================================
 # TARGETS
 # ==============================================================================
-## db-start: Start postgreslq database
+## start: Start start focker compose
 .PHONY: start
 start:
 	docker compose up -d
 
-
+## stop: Stop docker compose
 .PHONY: stop
 stop:
 	docker compose down

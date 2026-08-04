@@ -392,3 +392,31 @@ go get golang.org/x/crypto/bcrypt@latest
 | Method | URL Patter                | Action                                          |
 |--------|---------------------------|-------------------------------------------------|
 | POST   | /v1/users                 | Register a new user                             |
+
+## Chapter 13: Sending emails
+
+### Chapter 13.02: Creating email templates
+
+* Install golang packages
+
+``` bash
+go get github.com/wneessen/go-mail@latest
+```
+
+### Chapter 13.03: Sending a welcome email
+
+* Generate mailpit local certificates
+
+``` bash
+openssl req \
+  -newkey rsa:4096 \
+  -nodes \
+  -keyout _local/ssl/smtp.key \
+  -x509 \
+  -sha256 \
+  -days 365 \
+  -out _local/ssl/smtp.crt \
+  -subj "/C=BG/O=LocalDevelopment Ltd/CN=localhost" \
+  -addext "subjectAltName=DNS:mail.example.com,DNS:smtp.example.com,DNS:localhost,IP:127.0.0.1"
+```
+
