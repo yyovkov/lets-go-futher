@@ -375,4 +375,15 @@ for i in {1..6}; do curl http://localhost:4000/v1/healthcheck; done
 
 ### Chapter 11.03: Executing the shutdown
 
+## Chapter 12: User model setup and registration
+
+### Chapter 12.01: Setting up the users database table
+
+### Chapter 12.02: Setting up users model
+
+* Install golang packages
+
+``` bash
+go get golang.org/x/crypto/bcrypt@latest
+```
 
