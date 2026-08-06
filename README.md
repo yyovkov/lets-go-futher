@@ -423,3 +423,20 @@ openssl req \
 ### Chapter 13.04: Sending background emails
 
 ### Chapter 13.05 Graceful shutdown of background tasks
+
+## Chapter 14: User activation
+
+### Chapter 14.01: Setting up tokens database table
+
+* Create migration files
+
+``` bash
+migrate create -seq -ext .sql -dir ./migrations create_tokens_table
+```
+
+* Execute SQL migrations
+
+``` bash
+migrate -path=./migrations -database=$GREENLIGHT_DB_DSN up
+```
+
