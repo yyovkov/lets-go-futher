@@ -440,3 +440,11 @@ migrate create -seq -ext .sql -dir ./migrations create_tokens_table
 migrate -path=./migrations -database=$GREENLIGHT_DB_DSN up
 ```
 
+### Chapter: 14.02: Creating secure activation tokens
+
+* Create tokens file
+
+``` bash
+touch internal/data/tokens.go
+```
+
