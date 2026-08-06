@@ -448,3 +448,5 @@ migrate -path=./migrations -database=$GREENLIGHT_DB_DSN up
 touch internal/data/tokens.go
 ```
 
+### Chapter 14.03: Sending activation tokens
+
