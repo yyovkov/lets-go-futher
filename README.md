@@ -450,3 +450,9 @@ touch internal/data/tokens.go
 
 ### Chapter 14.03: Sending activation tokens
 
+### Chapter 14.04: activating a user
+
+| Method | URL Patter                | Action                                          |
+|--------|---------------------------|-------------------------------------------------|
+| PUT    | /v1/users/activated       | Activate a specific user                        |
+
