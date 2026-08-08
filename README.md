@@ -524,3 +524,5 @@ migrate create -seq -ext .sql -dir ./migrations add_permissions
 migrate -path ./migrations -database $GREENLIGHT_DB_DSN up
 ```
 
+### Chapter 16.03: Setting up the permissions model
+
