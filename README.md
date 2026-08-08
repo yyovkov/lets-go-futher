@@ -468,4 +468,6 @@ touch internal/data/tokens.go
 
 ### Chapter 15.03: Authenticating requests
 
+## Chapter 16: Permission-based authentication
 
+### Chapter 16.01: Requiring user activation
