@@ -471,3 +471,56 @@ touch internal/data/tokens.go
 ## Chapter 16: Permission-based authentication
 
 ### Chapter 16.01: Requiring user activation
+
+### Chapter 16.02: Setting up the permissions database table
+
+* Required permissions table
+
+| Method | URL Patter                | Required permissions                            |
+|--------|---------------------------|-------------------------------------------------|
+| GET    | /v1/healthcheck           | -                                               |
+| GET    | /v1/movies                | movies:read                                     |
+| POST   | /v1/movies                | movies:write                                    |
+| GET    | /v1/movies/:id            | movies:read                                     |
+| PATCH  | /v1/movies/:id            | movies:write                                    |
+| DELETE | /v1/movies/:id            | movies:write                                    |
+| POST   | /v1/users                 | -                                               |
+| PUT    | /v1/users/activated       | -                                               |
+| POST   | /v1/users/authentication  | -                                               |
+
+* Relationship between permissions and users
+
+  * **users** table
+
+  | id | email             | ... |
+  |----|-------------------|-----|
+  | 1  | alice@example.com | ... |
+  | 2  | bon@example.com   | ... |
+
+  * **permissions** tables
+
+  | id | code         |
+  |----|--------------|
+  | 1  | movies:read  |
+  | 2  | movies:write |
+
+  * **user_permissions**
+
+  | user_id | permission_id |
+  |---------|---------------|
+  | 1       | 1             |
+  | 2       | 1             |
+  | 2       | 2             |
+
+* Creating the SQL migrations
+
+``` bash
+migrate create -seq -ext .sql -dir ./migrations add_permissions
+```
+
+* Run migrations
+
+``` bash
+migrate -path ./migrations -database $GREENLIGHT_DB_DSN up
+```
+
