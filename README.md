@@ -554,3 +554,5 @@ WHERE users.activated = true
 GROUP BY email;
 ```
 
+### Chapter 16.05: Granting permissions
+
