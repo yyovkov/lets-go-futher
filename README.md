@@ -456,3 +456,12 @@ touch internal/data/tokens.go
 |--------|---------------------------|-------------------------------------------------|
 | PUT    | /v1/users/activated       | Activate a specific user                        |
 
+## Chapter 15: Authentication
+
+### Chapter 15.01: Authentication options
+
+### Chapter 15.02: Generating authentication tokens
+
+| Method | URL Patter                | Action                                          |
+|--------|---------------------------|-------------------------------------------------|
+| POST   | /v1/tokens/authentication | Generate a new authentication token             |
