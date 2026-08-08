@@ -465,3 +465,7 @@ touch internal/data/tokens.go
 | Method | URL Patter                | Action                                          |
 |--------|---------------------------|-------------------------------------------------|
 | POST   | /v1/tokens/authentication | Generate a new authentication token             |
+
+### Chapter 15.03: Authenticating requests
+
+
