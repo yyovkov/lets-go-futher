@@ -553,6 +553,12 @@ INNER JOIN users ON users_permissions.user_id = users.id
 WHERE users.activated = true
 GROUP BY email;
 ```
-
 ### Chapter 16.05: Granting permissions
+
+
+## Chapter 17: Cross-origin requests
+
+### Chapter 17.01: An overview of CORS
+
+### Chapter 17.02: Demonstrating the same-origin policy
 
