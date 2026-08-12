@@ -700,3 +700,10 @@ make production/connect
 ## Chapter 21: Appendices
 
 ### Chapter 21.01: Managing password reset
+
+### Chapter 21.02: Creating additional activation tokens
+
+| Method | URL Patter                | Handler                      |Action                           |
+|--------|---------------------------|------------------------------|---------------------------------|
+| POST   | /v1/tokens/activation     | createActivationTokenHandler | Generate a new activation token |
+
