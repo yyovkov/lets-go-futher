@@ -648,3 +648,47 @@ go tool staticcheck ./...
 got tool dist list
 ```
 
+## Chapter 20: Deployment and hosting
+
+### Chapter 20.01: Creating a DigitalOcean droplet
+
+### Chapter 20.02: Server configuration and installing software
+
+* Run install script on the server
+
+``` bash
+rsync -rP --delete ./remote/setup root@remote.server.fqdn/root
+ssh -t root@remote.server.fqdn "bash /root/setup/01.sh"
+```
+
+* Connect to the remote server
+
+``` bash
+ssh greenlight@remote.server.fqdn
+```
+
+* Check services
+
+``` bash
+migrate --version
+psql ${GREENLIGHT_DB_DSN}
+sudo systemctl status caddy
+```
+
+* Run deployment
+
+``` bash
+make production/deploy/api
+```
+
+* Connect to remote server
+
+``` bash
+make production/connect
+```
+
+* Start application on the remote server
+
+``` bash
+./api -port=4000 -db-dsn=$GREENLIGHT_DB_DSN -env=production
+```
