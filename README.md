@@ -638,5 +638,13 @@ go tool staticcheck --version
 go tool staticcheck ./...
 ```
 
-### Chapter 19.4: Module mirrors and vendoring
+### Chapter 19.04: Module mirrors and vendoring
+
+### Chapter 19.05: Building binaries
+
+* Check GO available platforms
+
+``` bash
+got tool dist list
+```
 
