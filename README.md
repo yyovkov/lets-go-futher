@@ -601,3 +601,4 @@ BODY='{"email": "alice@example.com", "password": "pa55word"}'
 hey -d "$BODY" -m "POST" http://localhost:4000/v1/tokens/authentication
 ```
 
+### Chapter 18.04: Recording HTTP status codes
