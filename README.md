@@ -707,3 +707,22 @@ make production/connect
 |--------|---------------------------|------------------------------|---------------------------------|
 | POST   | /v1/tokens/activation     | createActivationTokenHandler | Generate a new activation token |
 
+### Chapter 21.03: Authentication with JSON Web Tokens
+
+* Install golang package
+
+``` bash
+go get github.com/pascaldekloe/jwt@v1
+```
+
+* Generate JWT Token
+
+``` bash
+curl -X POST -d '{"email": "faith@example.com", "password": "pa55word"}' localhost:4000/v1/tokens/authentication
+```
+
+* User JWT Token
+
+``` bash
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJncmVlbmxpZ..." localhost:4000/v1/movies/2
+```
