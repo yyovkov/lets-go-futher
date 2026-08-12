@@ -1,9 +1,9 @@
 include .envrc
 
-# ==============================================================================
-# ==============================================================================
+# ============================================================================ #
 # HELERS
-# ==============================================================================
+# ============================================================================ #
+
 ## help: print this help message
 .PHONY: help
 help:
@@ -13,9 +13,10 @@ help:
 confirm:
 	@echo -n 'Are you sure? [y/N]' && read ans && [ $${ans:-N} = y ]
 
-# ==============================================================================
-# TARGETS
-# ==============================================================================
+# ============================================================================ #
+# DEVELOPMENT
+# ============================================================================ #
+#
 ## start: Start start focker compose
 .PHONY: start
 start:
@@ -45,3 +46,24 @@ db/migrations/new:
 .PHONY: db/migrations/us
 db/migrations/up: confirm
 	migrate -path ./migrations -database ${GREENLIGHT_DB_DSN} up
+
+# ============================================================================ #
+# QUALITY CONTROL
+# ============================================================================ #
+
+## tidy: tidy module dependencies, and format and modernize all .go files
+.PHONY: tidy
+tidy:
+	go mod tidy
+	go fix ./...
+	go fmt ./...
+
+## audit: run quality control check
+.PHONY: audit
+audit:
+	go mod tidy -diff
+	go mod verify
+	go vet ./...
+	go tool staticcheck ./...
+	go test -race -vet=off ./...
+

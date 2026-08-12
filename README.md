@@ -623,3 +623,18 @@ hey -d "$BODY" -m "POST" http://localhost:4000/v1/tokens/authentication
 
 ### Chapter 19.02: Managing environmental variables
 
+### Chapter 19.03: Quality-controlling code
+
+* Install staticcheck
+
+``` bash
+go get -tool honnef.co/go/tools/cmd/staticcheck@latest
+go tool staticcheck --version
+```
+
+* Using staticcheck
+
+``` bash
+go tool staticcheck ./...
+```
+

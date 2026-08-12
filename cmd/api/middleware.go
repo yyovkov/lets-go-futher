@@ -130,6 +130,7 @@ func (app *application) authenticate(next http.Handler) http.Handler {
 	})
 }
 
+//lint:ignore U1000 middleware currently unused, but might be in the future
 func (app *application) requireActivatedUser(next http.HandlerFunc) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		authenticatedUser, found := app.contextGetAuthenticatedUser(r)
