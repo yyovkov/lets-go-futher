@@ -696,3 +696,7 @@ make production/connect
 ### Chapter 20.04: Running the API as a background service
 
 ### Chapter 20.05: Using Caddy as a reverse proxy
+
+## Chapter 21: Appendices
+
+### Chapter 21.01: Managing password reset

@@ -1,0 +1,10 @@
+# Setup TLS
+
+{
+    email yyovkov+greenlight@yyovkov.net
+}
+
+http://greenlight.castle.yyovkov.net {
+  respond /debug/* "Not Permitted" 403
+  reverse_proxy localhost:4000
+}
