@@ -96,4 +96,12 @@ production/connect:
 production/deploy/api:
 	rsync -P ./bin/linux_amd64/api ${prduction_deployment_user}@${production_host}:~
 	rsync -rP --delete ./migrations ${prduction_deployment_user}@${production_host}:~
-	ssh -t ${prduction_deployment_user}@${production_host} 'migrate -path ~/migrations -database $${GREENLIGHT_DB_DSN} up'
+	rsync -P ./remote/production/api.service ${prduction_deployment_user}@${production_host}:~
+	ssh -t ${prduction_deployment_user}@${production_host} '\
+		migrate -path ~/migrations -database $${GREENLIGHT_DB_DSN} up \
+		&& sudo mv ~/api.service /etc/systemd/system/ \
+		&& sudo systemctl daemon-reload \
+		&& sudo systemctl enable api \
+		&& sudo systemctl restart api \
+		'
+
