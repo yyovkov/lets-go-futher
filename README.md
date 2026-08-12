@@ -726,3 +726,7 @@ curl -X POST -d '{"email": "faith@example.com", "password": "pa55word"}' localho
 ``` bash
 curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJncmVlbmxpZ..." localhost:4000/v1/movies/2
 ```
+
+### Chapter 21.04: JSON encoding nuances
+
+### Chapter 21.05: JSON decoding nuances
