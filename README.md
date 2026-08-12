@@ -585,3 +585,19 @@ BODY='{"email": "alice@example.com", "password": "pa55word"}'
 hey -d "$BODY" -m "POST" http://localhost:4000/v1/tokens/authentication
 ```
 
+### Chapter 18.03: Request-level metrics
+
+* Start the server without limiter enabled
+
+``` bash
+go run ./cmd/api -limiter-enabled=false
+```
+
+* View metrics by visiting [http://localhost:9000/debug/vars]
+* Run load test with `hey``
+
+``` bash
+BODY='{"email": "alice@example.com", "password": "pa55word"}'
+hey -d "$BODY" -m "POST" http://localhost:4000/v1/tokens/authentication
+```
+
