@@ -562,3 +562,4 @@ GROUP BY email;
 
 ### Chapter 17.02: Demonstrating the same-origin policy
 
+### Chapter 17.03: Simple CORS requests
