@@ -55,6 +55,8 @@ db/migrations/up: confirm
 .PHONY: tidy
 tidy:
 	go mod tidy
+	go mod verify
+	go mod vendor
 	go fix ./...
 	go fmt ./...
 

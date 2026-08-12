@@ -638,3 +638,5 @@ go tool staticcheck --version
 go tool staticcheck ./...
 ```
 
+### Chapter 19.4: Module mirrors and vendoring
+
