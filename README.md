@@ -565,3 +565,23 @@ GROUP BY email;
 ### Chapter 17.03: Simple CORS requests
 
 ### Chapter 17.04: Preflight CORS requests
+
+## Chapter 18: Metrics
+
+### Chapter 18.01: Exposing metrics with expvar
+
+| Method | URL Patter                | Handler          | Action                        |
+|--------|---------------------------|------------------|-------------------------------|
+| POST   | /v1/tokens/authentication | expvar.Handler() | Display application metrics   |
+
+
+### Chapter 18.02: Creating custom metrics
+
+* Test metrics by visiting [http://localhost:9000/debug/vars]
+* Perform load testing of database:
+
+``` bash
+BODY='{"email": "alice@example.com", "password": "pa55word"}'
+hey -d "$BODY" -m "POST" http://localhost:4000/v1/tokens/authentication
+```
+
