@@ -620,3 +620,6 @@ hey -d "$BODY" -m "POST" http://localhost:4000/v1/tokens/authentication
 ## Chapter 19: Building, versioning an quality control
 
 ### Chapter 19.01: Creating and using makefiles
+
+### Chapter 19.02: Managing environmental variables
+
